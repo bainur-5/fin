@@ -15,6 +15,10 @@ module.exports = {
         'sans': ['Inter', 'sans-serif'],
         'serif': ['DM Serif Text', 'serif']
       },
+      boxShadow:{
+        'custom' : '3px 5px 4px rgba(0, 0, 0, 0.2)',
+        'menu' : '-3px 5px 2px rgba(0, 0, 0, 0.2)'
+      }
     }
   },
   plugins: [

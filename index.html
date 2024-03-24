@@ -6,177 +6,665 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="./dist/swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body class="max-w-screen-2xl bg-primary-white">
-    <header class="bg-transparent flex justify-between py-2 px-6 font-body !bg-primary-green items-center" id="home">
-        <!-- logo -->
-        <div class="font-logo">
-            <a href="/" class="font-extrabold text-primary-yellow text-6xl">
-                FIN
-            </a>
+<body class="">
+    <header class="min-h-[4.75rem] transition-transform duration-300" id="home">
+        <div class=" !bg-primary-green w-full header transition-transform !duration-300 z-[999] top-0 mx-auto">
+            <div class="relative flex items-center justify-between px-6 py-2 mx-auto transition-transform duration-300 font-body max-w-screen-2xl">
+                <!-- logo -->
+                <div class="font-logo">
+                    <a href="/" class="text-6xl font-extrabold text-primary-yellow">
+                        FIN
+                    </a>
+                </div>
+                <!-- Бургер кнопка -->
+                <button class="z-[999999] text-primary-yellow sm:hidden focus:outline-none burger-button">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <!-- Навигационное меню -->
+                <nav
+                    class="absolute right-0 z-50 pb-2 pl-10 pr-5 transition-transform duration-300 translate-x-full shadow-menu sm:relative sm:block nav-menu pt-60 sm:p-0 sm:translate-x-0 bg-primary-green sm:shadow-none">
+                    <ul class="grid text-primary-white sm:gap-5 sm:flex font-body gap-y-5">
+                        <li class="">
+                            <a href="#home"
+                                class="inline-block w-full duration-150 border-0 hover:border-b-4 border-primary-yellow lg:text-xl">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block w-full duration-150 border-0 hover:border-b-4 border-primary-yellow lg:text-xl">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block w-full duration-150 border-0 hover:border-b-4 border-primary-yellow lg:text-xl">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="w-full duration-150 border-0 hover:border-b-4 border-primary-yellow lg:text-xl">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="w-full duration-150 border-0 hover:border-b-4 border-primary-yellow lg:text-xl">
+                                Contact us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <nav>
-            <ul class="flex gap-5 text-white font-body">
-                <li>
-                    <a href="#home" class="border-0 hover:border-b-4 border-primary-yellow duration-150 lg:text-xl">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="border-0 hover:border-b-4 border-primary-yellow duration-150 lg:text-xl">
-                        About Us
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="border-0 hover:border-b-4 border-primary-yellow duration-150 lg:text-xl">
-                        Services
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="border-0 hover:border-b-4 border-primary-yellow duration-150 lg:text-xl">
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="border-0 hover:border-b-4 border-primary-yellow duration-150 lg:text-xl">
-                        Contact us
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </header>
-    <main>
+
+
+    <main class="pb-60 bg-primary-white">
         <!-- first -->
-        <section class="w-full bg-primary-green flex justify-around px-14 items-center flex-wrap font-body">
-            <!-- title -->
-            <div class="w-1/3 grid gap-32">
-                <p class="font-serif lg:text-5xl text-white">
-                    "Transform your space with elegance."
-                </p>
-                <div class="flex gap-6">
-                    <button class="bg-primary-yellow rounded-full px-8 py-3">
-                        Shop Now
-                    </button>
-                    <button class="border border-primary-gray rounded-full px-8 py-3 text-primary-white">
-                        Shop Now
-                    </button>
+        <section class="w-full bg-primary-green font-body">
+            <div class="flex flex-wrap items-center justify-center mx-auto px-14 max-w-screen-2xl">
+                <!-- title -->
+                <div class="grid gap-32 sm:w-1/3">
+                    <p class="font-serif text-white lg:text-5xl">
+                        "Transform your space with elegance."
+                    </p>
+                    <div class="flex gap-6">
+                        <button class="px-8 py-3 rounded-full bg-primary-yellow">
+                            Shop Now
+                        </button>
+                        <button class="px-8 py-3 border rounded-full border-primary-gray text-primary-white">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+                <!-- img -->
+                <div class="sm:w-2/3">
+                    <div class="relative h-fit">
+                        <div class="relative z-10 h-fit">
+                            <img src="./src/img/couch 1.png" class="z-10 w-full h-full" alt="first">
+                        </div>
+                        <div
+                            class="absolute right-0 z-0 grid grid-cols-8 grid-rows-4 top-2 sm:top-10 lg:top-20 lg:gap-y-7 lg:gap-x-16 sm:gap-y-3 sm:gap-x-8 gap-y-3 gap-x-4">
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <!--  -->
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <!--  -->
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <!--  -->
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <!--  -->
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <!--  -->
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <!--  -->
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <!--  -->
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                            <!--  -->
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- img -->
-            <div class="w-2/3">
-                <div class="relative h-fit">
-                    <div class="z-10 relative h-fit">
-                        <img src="./src/img/couch 1.png" class="w-full h-full z-10" alt="first">
+        </section>
+        <!--  -->
+        <section class="flex items-center justify-between mx-auto mt-20 px-14 font-body max-w-screen-2xl">
+
+            <div class="max-w-72">
+                <p class="font-medium lg:text-4xl">Crafted with excellent material.</p>
+                <p class="font-sans font-light font-sm ">Donec mattis porta eros, aliquet finibus risus interdum at.
+                    Nulla vivethe as it was for us to know what was to be done.</p>
+                <button class="px-8 py-3 mt-4 text-white rounded-full bg-primary-green">Explore</button>
+            </div>
+            <button
+                class="relative flex flex-col items-center justify-end w-full text-center duration-300 rounded-lg lex max-w-72 h-72 bg-primary-green/10 hover:shadow-custom focus:shadow-custom focus:before:block focus:before:absolute focus:before:w-10 focus:before:h-10 focus:before:bg-[#2F2F2F] focus:before:rounded-full focus:before:left-auto focus:before:right-auto focus:before:-bottom-5">
+                <img src="./src/img/product-1.png" alt="prodict-1">
+                <div class="mb-14">
+                    <p class="font-medium">Moder Chair</p>
+                    <p>$60.00</p>
+                </div>
+            </button>
+            <button
+                class="relative flex flex-col items-center justify-end w-full text-center duration-300 rounded-lg lex max-w-72 h-72 bg-primary-green/10 hover:shadow-custom focus:shadow-custom focus:before:block focus:before:absolute focus:before:w-10 focus:before:h-10 focus:before:bg-[#2F2F2F] focus:before:rounded-full focus:before:left-auto focus:before:right-auto focus:before:-bottom-5">
+                <img src="./src/img/product-2.png" alt="prodict-1">
+                <div class="mb-14">
+                    <p class="font-medium">Kruzo Aero Chair</p>
+                    <p>$78.00</p>
+                </div>
+            </button>
+            <button
+                class="relative flex flex-col items-center justify-end w-full text-center duration-300 rounded-lg lex max-w-72 h-72 bg-primary-green/10 hover:shadow-custom focus:shadow-custom focus:before:block focus:before:absolute focus:before:w-10 focus:before:h-10 focus:before:bg-[#2F2F2F] focus:before:rounded-full focus:before:left-auto focus:before:right-auto focus:before:-bottom-5">
+                <img src="./src/img/product-3.png" alt="prodict-1">
+                <div class="mb-14">
+                    <p class="font-medium">Ergonomic Chair</p>
+                    <p>$88.00</p>
+                </div>
+            </button>
+        </section>
+        <!--  -->
+        <section class="flex flex-wrap justify-between mt-32 !font-sans px-14 items-center max-w-screen-2xl mx-auto">
+            <div class="lg:w-1/2">
+                <div>
+                    <p class="font-bold lg:text-3xl">Why Choose Us</p>
+                    <p class="mt-4 text-sm font-light">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                        vivethe as it was for us to know what was to be done. the</p>
+                </div>
+                <div class="flex flex-wrap justify-between mt-6 gap-y-6">
+                    <div class="grid w-1/2 gap-2">
+                        <i class=""><img src="./src/icon/Truck.png" class="" alt="truck"></i>
+                        <p class="text-sm font-medium">Fast & Free Shipping </p>
+                        <p class="text-sm font-light">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                            vivethe as it was</p>
                     </div>
-                    <div class="absolute top-20 right-0 grid grid-cols-8 grid-rows-4 lg:gap-y-7 lg:gap-x-16 z-0">
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
+                    <div class="grid w-1/2 gap-2">
+                        <i class=""><img src="./src/icon/Shop bag.png" class="" alt="shop"></i>
+                        <p class="text-sm font-medium">Easy to Shop</p>
+                        <p class="text-sm font-light">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                            vivethe as it was</p>
+                    </div>
+                    <div class="grid w-1/2 gap-2">
+                        <i class=""><img src="./src/icon/Support.png" class="" alt="support"></i>
+                        <p class="text-sm font-medium">24/7 Support</p>
+                        <p class="text-sm font-light">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                            vivethe as it was</p>
+                    </div>
+                    <div class="grid w-1/2 gap-2">
+                        <i class=""><img src="./src/icon/Return.png" class="" alt="return"></i>
+                        <p class="text-sm font-medium">Hassle Free Returns</p>
+                        <p class="text-sm font-light">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                            vivethe as it was</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative lg:w-1/2">
+                <div class="relative w-full pl-20">
+                    <div class="pt-10">
+                        <div class="relative z-50 w-4/5">
+                            <img src="./src/img/why-choose-us-img 1.png" class="z-50 w-full h-full" alt="choose">
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="absolute top-0 z-0 grid grid-cols-8 grid-rows-4 left-5 lg:gap-y-4 lg:gap-x-6">
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
                         <!--  -->
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
                         <!--  -->
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
                         <!--  -->
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
                         <!--  -->
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
                         <!--  -->
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
                         <!--  -->
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
                         <!--  -->
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
-                        <div class="h-2 w-2 bg-primary-yellow rounded-full z-0"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
+                        <div class="z-0 w-2 h-2 rounded-full bg-primary-yellow/50"></div>
                         <!--  -->
                     </div>
                 </div>
             </div>
         </section>
         <!--  -->
-        <section class="flex justify-between items-center px-14 font-body mt-12">
-            <div class="max-w-72">
-                <p class="font-medium lg:text-4xl">Crafted with excellent material.</p>
-                <p class="font-sans font-light font-sm ">Donec mattis porta eros, aliquet finibus risus interdum at.
-                    Nulla vivethe as it was for us to know what was to be done.</p>
-                <button class="px-8 py-3 rounded-full bg-primary-green text-white">Explore</button>
+        <section class="flex flex-wrap items-center justify-between mx-auto mt-40 max-w-screen-2xl px-14 ">
+            <div class="relative w-2/3">
+                <div class="relative z-50 flex items-start w-4/5 ml-auto gap-x-2">
+                    <div class="lg:max-h-[30rem] lg:max-w-[27rem]">
+                        <img src="./src/img/img-grid-1 1.png" class="w-full h-full rounded-l-md shadow-custom" alt="">
+                    </div>
+                    <div class="grid gap-2 text-center">
+                        <div class="max-w-44">
+                            <img src="./src/img/img-grid-2 1.png" class="w-full h-full rounded-md" alt="">
+                        </div>
+                        <div class="absolute right-[5.5rem] -bottom-5 max-w-72">
+                            <img src="./src/img/img-grid-3 1.png" class="w-full h-full rounded-md" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+
+                <div class="absolute z-0 grid grid-cols-8 grid-rows-4 -top-20 left-16 gap-y-4 gap-x-8">
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <!--  -->
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <!--  -->
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <!--  -->
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <!--  -->
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <!--  -->
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <!--  -->
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <!--  -->
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <div class="z-0 w-2 h-2 rounded-full bg-primary-green/50"></div>
+                    <!--  -->
+                </div>
             </div>
-            <button class="max-w-72 h-72 w-full text-center bg-primary-gray rounded-md flex flex-col justify-end items-center">
-                <img src="./src/img/product-1.png" alt="prodict-1" >
-                <div class="mb-10">
-                    <p class="font-medium">Moder Chair</p>
-                    <p>$60.00</p>
+            <div class="lg:w-1/3">
+                <div class="grid w-full gap-y-4">
+                    <p class="text-3xl font-bold">We help you make Modern Interior Design</p>
+                    <p class="font-sans text-sm font-light">Donec mattis porta eros, aliquet finibus risus interdum at.
+                        Nulla
+                        vivethe as it was for us to know what was to be done. the this is a long post for the text.`This
+                        small text has to be place here, since this is a place holder. You can also chane it.</p>
+                    <div class="grid gap-8">
+                        <ul class="flex flex-wrap justify-between font-sans gap-y-8">
+                            <li class="flex items-center w-1/2 gap-3 text-sm font-light">
+                                <img src="./src/icon/Ellipse 67.png" width="8" height="8" alt="disc">
+                                Donec mattis porta eros,let aliquet finibus ri
+                            </li>
+                            <li class="flex items-center w-1/2 gap-3 text-sm font-light">
+                                <img src="./src/icon/Ellipse 67.png" width="8" height="8" alt="disc">
+                                Donec mattis porta eros,let aliquet finibus ri
+                            </li>
+                            <li class="flex items-center w-1/2 gap-3 text-sm font-light">
+                                <img src="./src/icon/Ellipse 67.png" width="8" height="8" alt="disc">
+                                Donec mattis porta eros,let aliquet finibus ri
+                            </li>
+                            <li class="flex items-center w-1/2 gap-3 text-sm font-light">
+                                <img src="./src/icon/Ellipse 67.png" width="8" height="8" alt="disc">
+                                Donec mattis porta eros,let aliquet finibus ri
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="px-8 py-3 text-white rounded-full bg-primary-green max-w-fit">Explore</button>
                 </div>
-            </button>
-            <button class="max-w-72 h-72 w-full text-center bg-primary-gray rounded-md flex flex-col justify-end items-center">
-                <img src="./src/img/product-1.png" alt="prodict-1" >
-                <div class="mb-8">
-                    <p class="font-medium">Moder Chair</p>
-                    <p>$60.00</p>
+            </div>
+        </section>
+        <!--  -->
+        <section class="flex flex-wrap items-center justify-between mx-auto mt-52 max-w-screen-2xl px-14">
+            <div class="flex w-1/3 gap-6">
+                <div class="relative flex items-end h-24 rounded-md w-28 max-h-24 max-w-28 bg-primary-green/30">
+                    <img src="./src/img/product-1.png" alt="product-1">
                 </div>
-            </button>
-            <button class="max-w-72 h-72 w-full text-center bg-primary-gray rounded-md flex flex-col justify-end items-center">
-                <img src="./src/img/product-1.png" alt="prodict-1" >
-                <div class="mb-14">
-                    <p class="font-medium">Moder Chair</p>
-                    <p>$60.00</p>
+                <div class="flex flex-col justify-between font-sans">
+                    <p class="text-xl font-bold">Modern Chair</p>
+                    <p class="text-sm font-light">Donec mattis porta eros, aliquet finibus risus in. Donecd </p>
+                    <p class="text-sm font-medium text-gray-500">Reade more</p>
                 </div>
-            </button>
+            </div>
+            <div class="flex w-1/3 gap-6">
+                <div class="relative flex items-end h-24 rounded-md w-28 max-h-24 max-w-28 bg-primary-green/30">
+                    <img src="./src/img/product-2.png" alt="product-2">
+                </div>
+                <div class="flex flex-col justify-between font-sans">
+                    <p class="text-xl font-bold">Kruzi Aero</p>
+                    <p class="text-sm font-light">Donec mattis porta eros, aliquet finibus risus in. Donecd </p>
+                    <p class="text-sm font-medium text-gray-500">Reade more</p>
+                </div>
+            </div>
+            <div class="flex w-1/3 gap-6">
+                <div class="relative flex items-end h-24 rounded-md w-28 max-h-24 max-w-28 bg-primary-green/30">
+                    <img src="./src/img/product-3.png" alt="product-3">
+                </div>
+                <div class="flex flex-col justify-between font-sans">
+                    <p class="text-xl font-bold">Ergonomic Chair</p>
+                    <p class="text-sm font-light">Donec mattis porta eros, aliquet finibus risus in. Donecd </p>
+                    <p class="text-sm font-medium text-gray-500">Reade more</p>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="px-16 mx-auto text-center mt-52 max-w-screen-2xl">
+            <div>
+                <p class="text-4xl font-bold">Testimonials</p>
+            </div>
+            <div class="w-4/5 mx-auto">
+                <div class="swiper-container swiper">
+                    <div class="swiper-wrapper">
+                        <div class="!px-16 swiper-slide">
+                            <p class="font-sans  йtext-light">‘’Donec nibh magna, interdum quis massa sed, rhoncus
+                                laoreet
+                                quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit
+                                amet arcu a, maximus suscipit nibh. Integer vel nibh tellus. Pellentesque in risus non
+                                dui venenatis sollicitudin sed vitae diam. Fusce tincidunt nisl mi, at molestie odio
+                                accumsan non. Pellentesque ma’’</p>
+                        </div>
+                        <div class="px-16 swiper-slide">
+                            <p class="font-sans text-light">‘’Donec nibh magna, interdum quis massa sed, rhoncus laoreet
+                                quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit
+                                amet arcu a, maximus suscipit nibh. Integer vel nibh tellus. Pellentesque in risus non
+                                dui venenatis sollicitudin sed vitae diam. Fusce tincidunt nisl mi, at molestie odio
+                                accumsan non. Pellentesque ma’’</p>
+                        </div>
+                        <div class="px-16 swiper-slide">
+                            <p class="font-sans text-light">‘’Donec nibh magna, interdum quis massa sed, rhoncus laoreet
+                                quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit
+                                amet arcu a, maximus suscipit nibh. Integer vel nibh tellus. Pellentesque in risus non
+                                dui venenatis sollicitudin sed vitae diam. Fusce tincidunt nisl mi, at molestie odio
+                                accumsan non. Pellentesque ma’’</p>
+                        </div>
+                    </div>
+                    <div class="!text-black swiper-button-next"></div>
+                    <div class="!text-black swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="max-w-screen-sm px-16 mx-auto mt-52 ">
+            <div class="swiper second-swiperr">
+                <div class="mb-10 swiper-wrapper min-h-32">
+                    <div class="flex items-center justify-between h-full text-center swiper-slide">
+                        <img src="./src/img/person-1 1.png" class="mx-auto rounded-full" alt="person">
+                        <p class="my-2 text-xl font-medium">Zain Bin Noor</p>
+                        <p class="font-sans text-sm font-light">CEO, Co-Founder, XYZ Inc.</p>
+                    </div>
+                    <div class="flex items-center justify-between h-full text-center swiper-slide">
+                        <img src="./src/img/person-1 1.png" class="mx-auto rounded-full" alt="person">
+                        <p class="my-2 text-xl font-medium">Zain Bin Noor</p>
+                        <p class="font-sans text-sm font-light">CEO, Co-Founder, XYZ Inc.</p>
+                    </div>
+                    <div class="flex items-center justify-between h-full text-center swiper-slide">
+                        <img src="./src/img/person-1 1.png" class="mx-auto rounded-full" alt="person">
+                        <p class="my-2 text-xl font-medium">Zain Bin Noor</p>
+                        <p class="font-sans text-sm font-light">CEO, Co-Founder, XYZ Inc.</p>
+                    </div>
+                    <div class="flex items-center justify-between h-full text-center swiper-slide">
+                        <img src="./src/img/person-1 1.png" class="mx-auto rounded-full" alt="person">
+                        <p class="my-2 text-xl font-medium">Zain Bin Noor</p>
+                        <p class="font-sans text-sm font-light">CEO, Co-Founder, XYZ Inc.</p>
+                    </div>
+                    <div class="flex items-center justify-between h-full text-center swiper-slide">
+                        <img src="./src/img/person-1 1.png" class="mx-auto rounded-full" alt="person">
+                        <p class="my-2 text-xl font-medium">Zain Bin Noor</p>
+                        <p class="font-sans text-sm font-light">CEO, Co-Founder, XYZ Inc.</p>
+                    </div>
+                    <div class="flex items-center justify-between h-full text-center swiper-slide">
+                        <img src="./src/img/person-1 1.png" class="mx-auto rounded-full" alt="person">
+                        <p class="my-2 text-xl font-medium">Zain Bin Noor</p>
+                        <p class="font-sans text-sm font-light">CEO, Co-Founder, XYZ Inc.</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination !mt-5"></div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="mx-auto px-14 max-w-screen-2xl mt-52">
+            <div class="flex items-center justify-between w-full">
+                <p class="text-3xl font-bold">Recently Blog</p>
+                <p class="font-sans font-medium border-b-4 border-primary-yellow">View All Posts</p>
+            </div>
+            <div
+                class="flex flex-wrap items-center justify-center gap-4 mx-auto mt-6 font-sans w-1jus1/12 lg:flex-wrap-reverse">
+                <div class="w-full max-w-md lg:w-1/3">
+                    <div class="w-full">
+                        <img src="./src/img/post-1 1.png" class="w-full rounded-md" alt="post-1">
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-xl font-bold">First Time Home Owner Ideas</p>
+                        <p class="font-light">by <span class="font-medium">Nana Ama</span> on <span
+                                class="font-medium">Nov 18th, 2022</span></p>
+                    </div>
+                </div>
+                <div class="w-full max-w-md lg:w-1/3">
+                    <div class="w-full">
+                        <img src="./src/img/post-2 1.png" class="w-full rounded-md" alt="post-1">
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-xl font-bold">First Time Home Owner Ideas</p>
+                        <p class="font-light">by <span class="font-medium">Nana Ama</span> on <span
+                                class="font-medium">Nov 18th, 2022</span></p>
+                    </div>
+                </div>
+                <div class="w-full max-w-md lg:w-1/3">
+                    <div class="w-full">
+                        <img src="./src/img/post-3 1.png" class="w-full rounded-md" alt="post-1">
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-xl font-bold">First Time Home Owner Ideas</p>
+                        <p class="font-light">by <span class="font-medium">Nana Ama</span> on <span
+                                class="font-medium">Nov 18th, 2022</span></p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    <footer class="font-sans">
+        <section class="flex justify-between px-16 mx-auto mt-32 max-w-screen-2xl">
+            <div class="w-2/3 ">
+                <p class="flex items-center gap-1 ml-4 mr-auto -mt-4 text-xl font-bold"><i><img
+                            src="./src/icon/Vector.png" alt="vector"></i> Subscribe to Newsletter</p>
+                <br>
+                <div class="flex items-center justify-end gap-4">
+                    <input type="text" placeholder="Enter your name"
+                        class="py-4 pl-6 border border-gray-400 outline-none rounded-xl">
+                    <input type="text" placeholder="Enter your name"
+                        class="py-4 pl-6 border border-gray-400 outline-none rounded-xl">
+                    <a href="#" class="p-4 bg-primary-green rounded-xl"><img src="./src/icon/telegram.png"
+                            alt="telegram"></a>
+                </div>
+            </div>
+            <div class="flex items-end w-1/3 max-h-36">
+                <img src="./src/img/sofa 1.png" alt="sofa">
+            </div>
+        </section>
+        <!--  -->
+        <section class="mx-auto mt-28 max-w-screen-2xl px-14">
+            <p class="text-4xl font-extrabold font-logo text-primary-green">FIN</p>
+            <div class="flex flex-wrap items-start gap-12 font-sans text-sm font-light">
+                <p class="max-w-[22.5rem] text-sm">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                    vivethe as it was for us to know
+                    what was to be done. the this is a long post for the text.`This small text has to be place here,
+                    since this is
+                </p>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Knowledge base</a></li>
+                    <li><a href="#">Live chat</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Jops</a></li>
+                    <li><a href="#">Our team</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Nordic Chair</a></li>
+                    <li><a href="#">Kruzo</a></li>
+                    <li><a href="#">Ergonomic</a></li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-2 mt-4">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#D9D9D9]">
+                    <a href="#"><img src="./src/icon/face.svg" alt="face"></a>
+                </span>
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#D9D9D9]">
+                    <a href="#"><img src="./src/icon/insta.svg" alt="insta"></a>
+                </span>
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#D9D9D9]">
+                    <a href="#"><img src="./src/icon/twit.svg" alt="twiter"></a>
+                </span>
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#D9D9D9]">
+                    <a href="#"><img src="./src/icon/in.svg" alt="in"></a>
+                </span>
+            </div>
+            <br>
+            <hr>
+            <br>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>

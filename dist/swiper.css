@@ -1,0 +1,175 @@
+.swiper-button-next::after,.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: large !important;
+    background-color: #6a6a6a50;
+    padding: .5rem .7rem;
+    border-radius: 99999px;
+    text-align: center;
+}
+.swiper-button-next:hover:after, .swiper-button-prev:hover:after{
+    background-color: #FFD748;
+}
+.swiper-button-next:focus::after, .swiper-button-prev:focus:after{
+    background-color: #FFD748;
+}
+.swiper-pagination-bullet-active {
+    background: #35736E !important;
+}
+.in:focus, .in:focus-visible{
+    outline: none !important;
+}
+/* Позиционирование бургер-меню */
+.burger-menu {
+    display: none;
+}
+
+/* Стили для кнопки закрытия бургер-меню */
+.close-burger-button {
+    color: white;
+}
+
+/* Стили для навигационного меню внутри бургер-меню */
+.burger-menu nav a {
+    color: white;
+}
+
+/* Показать бургер-меню при активации */
+.burger-menu.active {
+    display: block;
+}
+/*  */
+
+/*  COLORS */
+.bg-black {
+    background-color: #000000;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.text-gray {
+    color: #2a2a2a;
+}
+
+.text-gold {
+    color: #b7ac7f;
+}
+
+/*  FONTS - необходимо настроить шрифты в Tailwind CSS */
+
+/*  RESET */
+/* Так как Tailwind CSS автоматически обрабатывает стили сброса, не нужно ничего добавлять здесь. */
+
+/*  BURGER */
+.burger {
+    @apply fixed z-10 flex flex-col items-center justify-center w-12 h-12 rounded-md top-8 right-8;
+}
+
+.burger span {
+    @apply w-6 h-6 burger;
+}
+
+.burger.clicked span:before, .burger.clicked span:after {
+    background-color: #ffffff;
+}
+
+/* NAV */
+nav {
+    @apply fixed top-0 right-0 z-10 w-full h-full max-w-xs p-16 overflow-y-auto transition-transform ease-in-out transform translate-x-full bg-gray duration-550;
+}
+
+nav.show {
+    @apply transform translate-x-0;
+}
+
+@media (min-width: 667px) {
+    nav {
+        @apply p-32;
+    }
+}
+
+ul.main {
+    @apply list-none;
+}
+
+ul.main li {
+    @apply mb-8 transition-transform duration-300 transform translate-x-16 opacity-0;
+}
+
+ul.main li:last-of-type {
+    @apply mb-0;
+}
+
+ul.main li a {
+    @apply block text-lg font-bold text-white no-underline uppercase transition-all duration-300;
+}
+
+ul.main li a:hover {
+    @apply text-gold;
+}
+
+.about, .social, ul.sub {
+    @apply hidden transition-all transform translate-y-8 opacity-0 duration-400;
+}
+
+nav.show .about, nav.show .social, nav.show ul.sub {
+    @apply transform translate-y-0 opacity-100;
+    transition-delay: 0.85s;
+}
+
+.about {
+    @apply mt-16;
+}
+
+.about p {
+    @apply font-serif text-lg leading-loose text-white;
+}
+
+.social {
+    @apply relative pb-12 mt-16;
+}
+
+.social:after {
+    @apply block content "" w-36 h-px bg-gold absolute bottom-0 left-0;
+}
+
+.social a {
+    @apply inline-block w-12 h-12 mr-6;
+}
+
+.social a:last-of-type {
+    @apply mr-0;
+}
+
+.social a:hover svg path, .social a:hover svg circle {
+    fill: #b7ac7f;
+}
+
+ul.sub {
+    @apply mt-16 list-none;
+}
+
+ul.sub li {
+    @apply mb-4;
+}
+
+ul.sub li:last-of-type {
+    @apply mb-0;
+}
+
+ul.sub li a {
+    @apply text-base font-semibold text-white no-underline transition-all duration-300;
+}
+
+ul.sub li a:hover {
+    @apply text-gold;
+}
+
+/* OVERLAY */
+.overlay {
+    @apply fixed top-0 left-0 z-10 invisible w-full h-full transition-all duration-300 ease-in-out opacity-0 bg-gold;
+}
+
+.overlay.show {
+    @apply visible opacity-80;
+}
